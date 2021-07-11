@@ -63,7 +63,7 @@ public class InputActivity extends AppCompatActivity {
                 double Low = Double.parseDouble(et_low.getText().toString());
                 double Close = Double.parseDouble(et_close.getText().toString());
 
-                diffrence = High - Low;
+                diffrence = High + Low;
 
                 //for resistence values
                 et_Rfinal = Close+(diffrence*0.927);
