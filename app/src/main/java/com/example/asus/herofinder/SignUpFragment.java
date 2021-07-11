@@ -212,7 +212,7 @@ public class SignUpFragment extends Fragment {
                        public void onComplete(@NonNull Task<AuthResult> task) {
                           if(task.isSuccessful()){
 
-                              Map<Object,String> userdata = new HashMap<>();
+                              Map<Object,String> userdata = new HashMap<>(); 
                               userdata.put("Name",fullName.getText().toString());
                               userdata.put("Email",email.getText().toString());
 

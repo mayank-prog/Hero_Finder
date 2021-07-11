@@ -22,4 +22,32 @@
         android:name="com.example.asus.herofinder.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.example.asus.herofinder.ui.main.AboutUsFragment"
+        android:label="@string/menu_about"
+        tools:layout="@layout/main_fragment2" />
+    <fragment
+        android:id="@+id/nav_feedback"
+        android:name="com.example.asus.herofinder.ui.main.FeedbackFragment"
+        android:label="@string/Feedback"
+        tools:layout="@layout/feedback_activity" />
+    <fragment
+        android:id="@+id/nav_TandC"
+        android:name="com.example.asus.herofinder.ui.main.TandCFragment"
+        android:label="@string/TnC"
+        tools:layout="@layout/main_fragmenttanc" />
+    <fragment
+        android:id="@+id/nav_HandS"
+        android:name="com.example.asus.herofinder.ui.main.HelpFragment"
+        android:label="@string/help"
+        tools:layout="@layout/main_help" />
+    <activity
+        android:id="@+id/nav_logout"
+        android:name="com.example.asus.herofinder.logoutDilog"
+        tools:layout="@layout/activity_logout_dilog"/>
+    <activity
+        android:id="@+id/nav_share"
+        android:name="com.example.asus.herofinder.shareDilog"
+        tools:layout="@layout/activity_share_dilog"/>
 </navigation>

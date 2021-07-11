@@ -1,6 +1,9 @@
 package com.example.asus.herofinder.ui.gallery;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,6 +37,8 @@ public class GalleryFragment extends Fragment {
     double et_Slow,et_Sminor,et_Smajor,et_Sfinal;
     double diffrence;
 
+    Dialog dialog;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -54,7 +59,8 @@ public class GalleryFragment extends Fragment {
         et_close = (EditText)root.findViewById(R.id.et_close);
 
         calculate_btn = (Button)root.findViewById(R.id.calculate_btn);
-
+        dialog =new Dialog(getActivity());
+//        Dialog alertDialog = new Dialog(getActivity());
         calculate_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,7 +91,7 @@ public class GalleryFragment extends Fragment {
                 double Low = Double.parseDouble(et_low.getText().toString());
                 double Close = Double.parseDouble(et_close.getText().toString());
 
-                diffrence = High - Low;
+                diffrence = High - Open; //change after @author Arnav
 
                 DecimalFormat df = new DecimalFormat("#.00");
 
@@ -138,9 +144,22 @@ public class GalleryFragment extends Fragment {
                 bundle.putDouble("et_Sfinal",et_Sfinal);
 
 
-                Intent i = new Intent(getActivity(), OutputActivity.class);
-                i.putExtras(bundle);
-                startActivity(i);
+
+                //for payment database creation and authontation
+
+
+                boolean b;
+                if(b=false){
+                    OpenDialog();
+                }else {
+                    Intent i = new Intent(getActivity(), OutputActivity.class);
+                    i.putExtras(bundle);
+                    startActivity(i);
+                }
+
+
+
+               //end payment database auth
             }
         });
 
@@ -155,5 +174,18 @@ public class GalleryFragment extends Fragment {
             }
         });
         return root;
+    }
+
+    private void OpenDialog() {
+        dialog.setContentView(R.layout.activity_payment);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
+        Button pay = (Button) dialog.findViewById(R.id.pay_btn);
+        pay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
     }
 }

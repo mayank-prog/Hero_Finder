@@ -382,7 +382,7 @@
                     android:textColor="@color/textcolor"/>
 
     <EditText
-        android:id="@+id/save_field"
+        android:id="@+id/c_name"
         android:layout_width="201dp"
         android:layout_height="43dp"
         android:layout_below="@+id/textView16"
@@ -393,8 +393,8 @@
         android:layout_marginTop="28dp"
         android:layout_marginEnd="6dp"
         android:layout_marginRight="6dp"
-        android:layout_toStartOf="@+id/save"
-        android:layout_toLeftOf="@+id/save"
+        android:layout_toStartOf="@+id/save_btn"
+        android:layout_toLeftOf="@+id/save_btn"
         android:background="@drawable/costum_input"
         android:drawableStart="@drawable/ic_save"
         android:drawableLeft="@drawable/ic_save"
@@ -406,7 +406,7 @@
         android:paddingEnd="12dp" />
 
     <Button
-        android:id="@+id/save"
+        android:id="@+id/save_btn"
         android:layout_width="98dp"
         android:layout_height="35dp"
         android:layout_below="@+id/et_Sfinal"

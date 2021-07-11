@@ -329,12 +329,14 @@ support levels by One Touch."
                 app:cardCornerRadius="25dp">
 
                 <RelativeLayout
+                    android:id="@+id/rl1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#D19ED4F3">
 
 
                     <TextView
+                        android:id="@+id/check_now"
                         android:layout_width="151dp"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"

@@ -10,7 +10,13 @@
         android:label="Hero Finder"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PaymentActivity"></activity>
+        <activity android:name=".shareDilog"></activity>
+        <activity android:name=".logoutDilog" />
+        <activity android:name=".Help" />
+        <activity android:name=".TandC" />
+        <activity android:name=".feedback" />
+        <activity android:name=".AboutUs" />
+        <activity android:name=".PaymentActivity" />
         <activity android:name=".ui.gallery.outputC" />
         <activity
             android:name="com.MainActivity"

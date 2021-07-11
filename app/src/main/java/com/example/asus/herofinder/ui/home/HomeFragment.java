@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -18,6 +19,7 @@ public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
 
+    RelativeLayout rl1;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -32,6 +34,27 @@ public class HomeFragment extends Fragment {
                 textView.setText(s);
             }
         });
+
+//        switch to history page
+
+        rl1 = (RelativeLayout) root.findViewById(R.id.rl1);
+        rl1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Toast.makeText(getActivity(), "Open History now!", Toast.LENGTH_SHORT).show();
+//                requireActivity().getSupportFragmentManager()
+//                        .beginTransaction()
+//                        .replace(R.id.nav_host_fragment, new SlideshowFragment())
+//                        .commit();
+//                Intent i = new Intent(HomeViewModel.class,SlideshowFragment.class);
+//                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                startActivity(i);
+//                finish();
+            }
+        });
+
+//        end history page switching
+
         return root;
     }
 

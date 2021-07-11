@@ -10,6 +10,12 @@
     <string name="menu_home">Hero Finder</string>
     <string name="menu_gallery">Level Finder</string>
     <string name="menu_slideshow">History</string>
+
+    <string name="menu_about">About us</string>
+    <string name="Feedback">Feedback</string>
+    <string name="help">Help &amp; Support</string>
+    <string name="TnC">Terms &amp; Conditions</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

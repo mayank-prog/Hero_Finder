@@ -7,6 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class OutputActivity extends AppCompatActivity {
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,5 +58,9 @@ public class OutputActivity extends AppCompatActivity {
         et_Sminor.setText(Double.toString(Sminor));
         et_Smajor.setText(Double.toString(Smajor));
         et_Sfinal.setText(Double.toString(Sfinal));
+
+
+        //history
     }
+
 }
