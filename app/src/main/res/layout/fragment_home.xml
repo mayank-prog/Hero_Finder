@@ -14,10 +14,9 @@
         android:orientation="vertical">
         <TextView
             android:id="@+id/text_home"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:gravity="center_horizontal"
+            android:gravity="center"
             android:textAlignment="center"
             android:layout_marginTop="8dp"
             android:textColor="@color/textcolor"
@@ -33,7 +32,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="170dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             app:cardCornerRadius="25dp"
             android:layout_marginLeft="0dp">
 
@@ -41,6 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#A4DBE4"
+                android:id="@+id/hero"
                 android:padding="10dp">
 
                 <TextView
@@ -53,6 +53,7 @@
                      />
 
                 <TextView
+                    android:id="@+id/txthero"
                     android:layout_width="196dp"
                     android:layout_height="60dp"
                     android:layout_above="@+id/t1"
@@ -62,7 +63,9 @@
                     android:layout_marginStart="0dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="4dp"
+                    android:layout_marginEnd="6dp"
                     android:layout_marginBottom="-105dp"
+                    android:layout_toStartOf="@+id/imageView3"
                     android:text="Invest with India top most
 Heroes brokers."
                     android:textColor="#776E6E"
@@ -70,15 +73,16 @@ Heroes brokers."
 
                 <ImageView
                     android:id="@+id/imageView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="115dp"
+                    android:layout_height="98dp"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
+                    android:layout_marginStart="36dp"
                     android:layout_marginTop="2dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    android:src="@mipmap/finder_card" />
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="2dp"
+                    android:src="@mipmap/hero_finder" />
 
 
             </RelativeLayout>
@@ -107,19 +111,16 @@ Heroes brokers."
                     >
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginStart="110dp"
-                        android:layout_marginLeft="110dp"
-                        android:layout_marginEnd="70dp"
-                        android:layout_marginRight="70dp"
                         android:layout_marginBottom="10dp"
                         android:text="Coming soon..."
+                        android:gravity="center"
                         android:textColor="#124AE7"
                         android:textSize="22dp"
                         android:textStyle="bold" />
@@ -139,13 +140,14 @@ Heroes brokers."
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="170dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             app:cardCornerRadius="25dp"
             android:layout_marginLeft="0dp">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="10dp"
+                android:id="@+id/leve_finder"
                 android:background="#D6EFEC80">
 
                 <TextView
@@ -165,9 +167,11 @@ Heroes brokers."
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
                     android:layout_marginStart="0dp"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="6dp"
                     android:layout_marginTop="4dp"
+                    android:layout_marginEnd="6dp"
                     android:layout_marginBottom="-117dp"
+                    android:layout_toStartOf="@+id/imageView4"
                     android:text="Trade with most accurate
 support and resistance levels."
                     android:textColor="#776E6E"
@@ -175,15 +179,16 @@ support and resistance levels."
 
                 <ImageView
                     android:id="@+id/imageView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="111dp"
+                    android:layout_height="97dp"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="2dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    android:src="@mipmap/level_card" />
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginRight="6dp"
+                    android:src="@mipmap/level_finder" />
 
             </RelativeLayout>
 
@@ -211,53 +216,41 @@ support and resistance levels."
 
                     <TextView
                         android:id="@+id/com1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentLeft="true"
+                        android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginStart="57dp"
-                        android:layout_marginLeft="57dp"
-                        android:layout_marginEnd="59dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginEnd="0dp"
                         android:layout_marginRight="59dp"
-                        android:layout_marginBottom="13dp"
-                        android:text="Subscribe"
+                        android:layout_marginBottom="-8dp"
+                        android:text="Read more..."
+                        android:textAlignment="center"
                         android:textColor="#124AE7"
                         android:textSize="22dp"
                         android:textStyle="bold" />
 
-                    <ImageView
-                        android:layout_width="43dp"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentBottom="true"
 
-                        android:layout_marginTop="-2dp"
-                        android:layout_marginEnd="150dp"
-                        android:layout_marginRight="150dp"
-                        android:layout_marginBottom="2dp"
-                        app:srcCompat="@drawable/ic_v_line"
-                        tools:ignore="VectorDrawableCompat" />
-
-                    <TextView
-                        android:layout_width="112dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginStart="238dp"
-                        android:layout_marginLeft="238dp"
-                        android:layout_marginEnd="21dp"
-                        android:layout_marginRight="21dp"
-                        android:layout_marginBottom="13dp"
-                        android:text="About"
-                        android:textColor="#124AE7"
-                        android:textSize="22dp"
-                        android:textStyle="bold" />
+                    <!--                    <TextView-->
+<!--                        android:layout_width="112dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignParentStart="true"-->
+<!--                        android:layout_alignParentLeft="true"-->
+<!--                        android:layout_alignParentEnd="true"-->
+<!--                        android:layout_alignParentRight="true"-->
+<!--                        android:layout_alignParentBottom="true"-->
+<!--                        android:layout_marginStart="238dp"-->
+<!--                        android:layout_marginLeft="238dp"-->
+<!--                        android:layout_marginEnd="21dp"-->
+<!--                        android:layout_marginRight="21dp"-->
+<!--                        android:layout_marginBottom="13dp"-->
+<!--                        android:text="About"-->
+<!--                        android:textColor="#124AE7"-->
+<!--                        android:textSize="22dp"-->
+<!--                        android:textStyle="bold" />-->
 
                 </RelativeLayout>
 
@@ -275,11 +268,12 @@ support and resistance levels."
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="170dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             app:cardCornerRadius="25dp"
             android:layout_marginLeft="0dp">
 
             <RelativeLayout
+                android:id="@+id/one_toch"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#D1C1D7E4"
@@ -304,11 +298,26 @@ support and resistance levels."
                     android:layout_marginStart="0dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
+                    android:layout_marginEnd="6dp"
                     android:layout_marginBottom="-115dp"
+                    android:layout_toStartOf="@+id/imageView5"
                     android:text="Get your saved resistance and
 support levels by One Touch."
                     android:textColor="#776E6E"
                     android:textSize="16dp" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="108dp"
+                    android:layout_height="101dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="-1dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginRight="6dp"
+                    android:src="@mipmap/checknow" />
 
             </RelativeLayout>
 
@@ -337,19 +346,20 @@ support levels by One Touch."
 
                     <TextView
                         android:id="@+id/check_now"
-                        android:layout_width="151dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginStart="129dp"
-                        android:layout_marginLeft="129dp"
-                        android:layout_marginEnd="91dp"
-                        android:layout_marginRight="91dp"
-                        android:layout_marginBottom="9dp"
-                        android:text="Check now"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="-8dp"
+                        android:text="Check now with below icon"
+                        android:textAlignment="center"
                         android:textColor="#124AE7"
                         android:textSize="22dp"
                         android:textStyle="bold" />

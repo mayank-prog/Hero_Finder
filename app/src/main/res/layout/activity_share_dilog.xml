@@ -2,16 +2,21 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="350dp"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    tools:context=".shareDilog">
+    tools:context=".shareDilog"
+    android:background="@drawable/box_for_calc">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+        android:layout_width="340dp"
         android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
         app:cardCornerRadius="25dp"
-        android:background="@color/colorPrimary">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -19,10 +24,11 @@
 
 
             <TextView
-                android:id="@+id/textView14"
-                android:layout_width="359dp"
-                android:layout_height="50dp"
+                android:id="@+id/textView142"
+                android:layout_width="332dp"
+                android:layout_height="47dp"
                 android:layout_marginTop="28dp"
+                android:gravity="center_horizontal"
                 android:text="We are Happy for you."
                 android:textAlignment="center"
                 android:textColor="@color/textcolor"
@@ -30,8 +36,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:gravity="center_horizontal" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Button
                 android:id="@+id/share_btn"
@@ -44,7 +49,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.501"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView14"
+                app:layout_constraintTop_toBottomOf="@+id/textView142"
                 app:layout_constraintVertical_bias="0.969" />
 
 

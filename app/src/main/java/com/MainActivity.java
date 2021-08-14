@@ -12,27 +12,29 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.example.asus.herofinder.R;
-import com.example.asus.herofinder.RegisterActivity;
+import com.hero.finder.herofinder.R;
+import com.hero.finder.herofinder.RegisterActivity;
+import com.hero.finder.herofinder.ui.gallery.GalleryViewModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.razorpay.PaymentResultListener;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class MainActivity extends AppCompatActivity implements PaymentResultListener ,NavigationView.OnNavigationItemSelectedListener{
 
     private AppBarConfiguration mAppBarConfiguration ;
+    private GalleryViewModel galleryViewModel;
 
     FirebaseAuth mAuth;
-    FirebaseUser USERS;
-    DatabaseReference dRef;
+    FirebaseUser CurrentUser;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +45,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toolbar.setTitleTextColor(getResources().getColor(R.color.colorAccent)); //color for meow bar holder data
 
         mAuth =FirebaseAuth.getInstance();
-        USERS = mAuth.getCurrentUser();
-        dRef = FirebaseDatabase.getInstance().getReference("USERS");
+        CurrentUser = mAuth.getCurrentUser();
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         BottomNavigationView navBottomView = findViewById(R.id.bottom_navigation_view); //add this for bottom nav
@@ -52,17 +53,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         navigationView.setNavigationItemSelectedListener(this);
-
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
                 .setDrawerLayout(drawer)
                 .build();
-
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
         NavigationUI.setupWithNavController(navBottomView, navController); //ad this for bottom nav_bar
         updateNavHeader();
+        galleryViewModel = new ViewModelProvider(this).get(GalleryViewModel.class);
+        galleryViewModel.setOnSuccess(false);
+        galleryViewModel.setOnError(false);
     }
 
     @Override
@@ -84,9 +86,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         View Headerview = navigationView.getHeaderView(0);
         TextView navBarUserName  = Headerview.findViewById(R.id.Name_nav);
-        TextView navBarUserEmail  = Headerview.findViewById(R.id.Email_nav);             // nav_Data user
-        navBarUserName.setText(USERS.getDisplayName());
-        navBarUserEmail.setText(USERS.getEmail());
+        TextView navBarUserEmail  = Headerview.findViewById(R.id.Email_nav);
+        // nav_Data user
+        navBarUserName.setText("Hi Hero");
+        navBarUserEmail.setText(CurrentUser.getEmail());
 
     }
     @Override
@@ -103,5 +106,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onPaymentSuccess(String s) {
+        PaymentSuccess paymentSuccess = new PaymentSuccess(s);
+
+        galleryViewModel.setPaymentSuccess(paymentSuccess);
+        galleryViewModel.setOnSuccess(true);
+    }
+
+    @Override
+    public void onPaymentError(int i, String s) {
+        PaymentError paymentError = new PaymentError(i,s);
+
+        galleryViewModel.setPaymentError(paymentError);
+        galleryViewModel.setOnError(true);
     }
 }

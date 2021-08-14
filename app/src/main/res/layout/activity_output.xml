@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.asus.herofinder.OutputActivity"
+    tools:context="com.hero.finder.herofinder.OutputActivity"
     android:orientation="vertical"
     android:padding="20dp"
     android:background="#ffffff">
@@ -34,35 +34,35 @@
         android:textSize="30dp" />
 
 
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView6"
-                    android:layout_alignEnd="@+id/textView6"
-                    android:layout_alignRight="@+id/textView6"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:background="@drawable/output_blue"
-                    android:padding="6dp"
-                    android:text="Upper Natural Point"
-                    android:textColor="@color/textcolor"
-                    android:textSize="18dp" />
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView6"
+        android:layout_alignEnd="@+id/textView6"
+        android:layout_alignRight="@+id/textView6"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/output_blue"
+        android:padding="6dp"
+        android:text="Initial Resistance"
+        android:textColor="@color/textcolor"
+        android:textSize="18dp" />
 
-                <TextView
-                    android:id="@+id/textView9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView8"
-                    android:layout_alignEnd="@+id/textView8"
-                    android:layout_alignRight="@+id/textView8"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:background="@drawable/output_blue"
-                    android:padding="6dp"
-                    android:text="Lower Natural Point"
-                    android:textColor="@color/textcolor"
-                    android:textSize="18dp" />
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView8"
+        android:layout_alignEnd="@+id/textView8"
+        android:layout_alignRight="@+id/textView8"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/output_blue"
+        android:padding="6dp"
+        android:text="Initial Support"
+        android:textColor="@color/textcolor"
+        android:textSize="18dp" />
 
                 <TextView
                     android:id="@+id/textView10"
@@ -79,50 +79,50 @@
                     android:textColor="@color/textcolor"
                     android:textSize="18dp" />
 
-                <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView10"
-                    android:layout_alignEnd="@+id/textView10"
-                    android:layout_alignRight="@+id/textView10"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:background="@drawable/output_red"
-                    android:padding="6dp"
-                    android:text="Super Support"
-                    android:textColor="@color/textcolor"
-                    android:textSize="18dp" />
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView10"
+        android:layout_alignEnd="@+id/textView10"
+        android:layout_alignRight="@+id/textView10"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/output_red"
+        android:padding="6dp"
+        android:text="Second Support"
+        android:textColor="@color/textcolor"
+        android:textSize="18dp" />
 
-                <TextView
-                    android:id="@+id/textView17"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView11"
-                    android:layout_alignEnd="@+id/textView11"
-                    android:layout_alignRight="@+id/textView11"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:background="@drawable/output_red"
-                    android:padding="6dp"
-                    android:text="Supreme Support"
-                    android:textColor="@color/textcolor"
-                    android:textSize="18dp" />
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView11"
+        android:layout_alignEnd="@+id/textView11"
+        android:layout_alignRight="@+id/textView11"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/output_red"
+        android:padding="6dp"
+        android:text="Third Support"
+        android:textColor="@color/textcolor"
+        android:textSize="18dp" />
 
-                <TextView
-                    android:id="@+id/textView7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView5"
-                    android:layout_alignEnd="@+id/textView5"
-                    android:layout_alignRight="@+id/textView5"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:background="@drawable/output_green"
-                    android:padding="6dp"
-                    android:text="Supreme Resistance"
-                    android:textColor="@color/textcolor"
-                    android:textSize="18dp" />
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView5"
+        android:layout_alignEnd="@+id/textView5"
+        android:layout_alignRight="@+id/textView5"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/output_green"
+        android:padding="6dp"
+        android:text="Third Resistance"
+        android:textColor="@color/textcolor"
+        android:textSize="18dp" />
 
                 <TextView
                     android:id="@+id/et_Rfinal"
@@ -201,7 +201,7 @@
                     android:background="@drawable/output_blue1"
                     android:gravity="center_horizontal"
                     android:padding="6dp"
-                    android:text="        Descrection         "
+                    android:text="        Discreption         "
                     android:textAlignment="center"
                     android:textColor="@color/colorAccent"
                     android:textSize="19dp" />
@@ -238,20 +238,20 @@
                     android:textColor="@color/textcolor"
                     android:textSize="18dp" />
 
-                <TextView
-                    android:id="@+id/textView13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView7"
-                    android:layout_alignEnd="@+id/textView7"
-                    android:layout_alignRight="@+id/textView7"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:background="@drawable/output_green"
-                    android:padding="6dp"
-                    android:text="Super Resistance"
-                    android:textColor="@color/textcolor"
-                    android:textSize="18dp" />
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView7"
+        android:layout_alignEnd="@+id/textView7"
+        android:layout_alignRight="@+id/textView7"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/output_green"
+        android:padding="6dp"
+        android:text="Second Resistance"
+        android:textColor="@color/textcolor"
+        android:textSize="18dp" />
 
                 <TextView
                     android:id="@+id/textView6"
@@ -416,7 +416,8 @@
         android:layout_marginEnd="52dp"
         android:layout_marginRight="52dp"
         android:background="@drawable/box_for_calc"
-        android:text="Save" />
+        android:text="Save"
+        android:enabled="false"/>
 
 </RelativeLayout>
 

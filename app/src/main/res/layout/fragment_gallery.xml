@@ -53,7 +53,7 @@
                     android:layout_marginLeft="13dp"
                     android:layout_marginStart="13dp"
                     android:layout_marginTop="42dp"
-                    android:id="@+id/textView6"
+                    android:id="@+id/textView61"
                     android:text="OPEN"
                     android:textSize="24sp"
                     android:textColor="@color/textcolor"/>
@@ -89,6 +89,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
                     android:ems="10"
+                    android:gravity="center"
                     android:layout_alignBottom="@+id/textView8"
                     android:layout_alignRight="@+id/et_high"
                     android:layout_alignEnd="@+id/et_high"
@@ -102,15 +103,16 @@
                     android:id="@+id/textView7"
                     android:textSize="24dp"
                     android:textColor="@color/textcolor"
-                    android:layout_below="@+id/textView6"
-                    android:layout_alignLeft="@+id/textView6"
-                    android:layout_alignStart="@+id/textView6" />
+                    android:layout_below="@+id/textView61"
+                    android:layout_alignLeft="@+id/textView61"
+                    android:layout_alignStart="@+id/textView61" />
 
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
                     android:ems="10"
+                    android:gravity="center"
                     android:id="@+id/et_close"
                     android:layout_alignBottom="@+id/textView9"
                     android:layout_alignLeft="@+id/et_low"
@@ -122,6 +124,7 @@
                     android:inputType="numberDecimal"
                     android:ems="10"
                     android:id="@+id/et_high"
+                    android:gravity="center"
                     android:layout_above="@+id/textView8"
                     android:layout_alignLeft="@+id/et_open"
                     android:layout_alignStart="@+id/et_open" />
@@ -146,8 +149,9 @@
                     android:inputType="numberDecimal"
                     android:ems="10"
                     android:id="@+id/et_open"
+                    android:gravity="center"
                     android:textSize="18sp"
-                    android:layout_alignBottom="@+id/textView6"
+                    android:layout_alignBottom="@+id/textView61"
                     android:layout_alignRight="@+id/reset_btn"
                     android:layout_alignEnd="@+id/reset_btn" />
 
@@ -177,31 +181,31 @@
         android:layout_height="match_parent">
 
 
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="109dp"
-            android:layout_height="31dp"
-            android:layout_marginStart="42dp"
-            android:layout_marginLeft="42dp"
-            android:layout_marginTop="44dp"
-            android:text="Valid up to :"
-            android:textColor="@color/red"
-            android:textSize="20dp"
-            app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+<!--        <TextView-->
+<!--            android:id="@+id/textView15"-->
+<!--            android:layout_width="109dp"-->
+<!--            android:layout_height="31dp"-->
+<!--            android:layout_marginStart="42dp"-->
+<!--            android:layout_marginLeft="42dp"-->
+<!--            android:layout_marginTop="44dp"-->
+<!--            android:text="Valid up to :"-->
+<!--            android:textColor="@color/red"-->
+<!--            android:textSize="20dp"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName"-->
+<!--            app:layout_constraintHorizontal_bias="1.0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
-        <TextView
-            android:id="@+id/editTextTextPersonName"
-            android:layout_width="146dp"
-            android:layout_height="43dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="40dp"
-            android:inputType="date"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+<!--        <TextView-->
+<!--            android:id="@+id/editTextTextPersonName"-->
+<!--            android:layout_width="146dp"-->
+<!--            android:layout_height="43dp"-->
+<!--            android:layout_marginTop="32dp"-->
+<!--            android:layout_marginEnd="40dp"-->
+<!--            android:layout_marginRight="40dp"-->
+<!--            android:inputType="date"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

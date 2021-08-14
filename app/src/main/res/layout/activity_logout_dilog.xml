@@ -2,16 +2,21 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="350dp"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
+    android:background="@drawable/box_for_calc"
     tools:context=".logoutDilog">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+        android:layout_width="340dp"
         android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
         app:cardCornerRadius="25dp"
-        android:background="@color/colorPrimary">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -19,13 +24,15 @@
 
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/textView19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
+                android:layout_marginBottom="44dp"
                 android:text="Do you really want !"
                 android:textColor="@color/textcolor"
                 android:textSize="28dp"
+                app:layout_constraintBottom_toTopOf="@+id/yes_btn"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -41,7 +48,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.215"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView14"
+                app:layout_constraintTop_toBottomOf="@+id/textView19"
                 app:layout_constraintVertical_bias="0.955" />
 
             <Button
@@ -55,7 +62,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.804"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView14"
+                app:layout_constraintTop_toBottomOf="@+id/textView19"
                 app:layout_constraintVertical_bias="0.977" />
 
 

@@ -7,47 +7,47 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.asus.herofinder.ui.home.HomeFragment"
+        android:name="com.hero.finder.herofinder.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.asus.herofinder.ui.gallery.GalleryFragment"
+        android:name="com.hero.finder.herofinder.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.asus.herofinder.ui.slideshow.SlideshowFragment"
+        android:name="com.hero.finder.herofinder.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
     <fragment
         android:id="@+id/nav_about"
-        android:name="com.example.asus.herofinder.ui.main.AboutUsFragment"
+        android:name="com.hero.finder.herofinder.ui.main.AboutUsFragment"
         android:label="@string/menu_about"
         tools:layout="@layout/main_fragment2" />
     <fragment
         android:id="@+id/nav_feedback"
-        android:name="com.example.asus.herofinder.ui.main.FeedbackFragment"
+        android:name="com.hero.finder.herofinder.ui.main.FeedbackFragment"
         android:label="@string/Feedback"
         tools:layout="@layout/feedback_activity" />
     <fragment
         android:id="@+id/nav_TandC"
-        android:name="com.example.asus.herofinder.ui.main.TandCFragment"
+        android:name="com.hero.finder.herofinder.ui.main.TandCFragment"
         android:label="@string/TnC"
         tools:layout="@layout/main_fragmenttanc" />
     <fragment
         android:id="@+id/nav_HandS"
-        android:name="com.example.asus.herofinder.ui.main.HelpFragment"
+        android:name="com.hero.finder.herofinder.ui.main.HelpFragment"
         android:label="@string/help"
         tools:layout="@layout/main_help" />
     <activity
         android:id="@+id/nav_logout"
-        android:name="com.example.asus.herofinder.logoutDilog"
+        android:name="com.hero.finder.herofinder.logoutDilog"
         tools:layout="@layout/activity_logout_dilog"/>
     <activity
         android:id="@+id/nav_share"
-        android:name="com.example.asus.herofinder.shareDilog"
+        android:name="com.hero.finder.herofinder.shareDilog"
         tools:layout="@layout/activity_share_dilog"/>
 </navigation>

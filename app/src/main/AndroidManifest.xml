@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.asus.herofinder">
+    package="com.hero.finder.herofinder" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -9,14 +9,18 @@
         android:icon="@mipmap/ic_launcher"
         android:label="Hero Finder"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".shareDilog"></activity>
-        <activity android:name=".logoutDilog" />
-        <activity android:name=".Help" />
-        <activity android:name=".TandC" />
-        <activity android:name=".feedback" />
-        <activity android:name=".AboutUs" />
-        <activity android:name=".PaymentActivity" />
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="adjustResize">
+        <activity android:name="com.hero.finder.herofinder.HeroAbout" >
+        </activity>
+        <activity android:name="com.History" />
+        <activity android:name="com.hero.finder.herofinder.shareDilog" />
+        <activity android:name="com.hero.finder.herofinder.logoutDilog" />
+        <activity android:name="com.hero.finder.herofinder.Help" />
+        <activity android:name="com.hero.finder.herofinder.TandC" />
+        <activity android:name="com.hero.finder.herofinder.feedback" />
+        <activity android:name="com.hero.finder.herofinder.AboutUs" />
+        <activity android:name="com.hero.finder.herofinder.PaymentActivity" />
         <activity android:name=".ui.gallery.outputC" />
         <activity
             android:name="com.MainActivity"
@@ -27,17 +31,17 @@
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".SplashActivity"
-            android:theme="@style/SplashTheme">
+            android:name="com.hero.finder.herofinder.SplashActivity"
+            android:theme="@style/SplashTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".InputActivity" />
-        <activity android:name=".OutputActivity" />
+        <activity android:name="com.hero.finder.herofinder.RegisterActivity" />
+        <activity android:name="com.hero.finder.herofinder.InputActivity" />
+        <activity android:name="com.hero.finder.herofinder.OutputActivity" />
     </application>
 
 </manifest>
