@@ -7,10 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -46,8 +46,12 @@ public class HomeFragment extends Fragment {
         rl1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "Open using below History Icon !", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getActivity(), "Open using below History Icon !", Toast.LENGTH_SHORT).show();
 //                requireActivity().getSupportFragmentManager()
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("History");
+                builder.setMessage("Open using history icon given below\uD83D\uDC47");
+                builder.show();
 //                        .beginTransaction()
 //                        .replace(R.id.nav_host_fragment, new SlideshowFragment())
 //                        .commit();
@@ -65,7 +69,11 @@ public class HomeFragment extends Fragment {
         hero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "We are working on it.", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getActivity(), "We are working on it.", Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("Hero Finder");
+                builder.setMessage("Wait to rock\uD83E\uDD18\uD83D\uDE0E...... Coming soon!");
+                builder.show();
             }
         });
 

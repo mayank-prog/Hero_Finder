@@ -45,11 +45,6 @@ public class History extends AppCompatActivity {
         TextView et_Rminor1 = (TextView) findViewById(R.id.et_Rminor);
         TextView et_Rlow1 = (TextView) findViewById(R.id.et_RLow);
 
-        et_Rfinal1.setText(Double.toString(et_Rfinal));
-        et_Rmajor1.setText(Double.toString(et_Rmajor));
-        et_Rminor1.setText(Double.toString(et_Rminor));
-        et_Rlow1.setText(Double.toString(et_RLow));
-
         // for natural values
         double et_Npoint1 = Close+(diffrence*0.073);
         et_Npoint1= Double.parseDouble(df.format(et_Npoint1));
@@ -59,8 +54,8 @@ public class History extends AppCompatActivity {
         TextView et_Npoint11 = (TextView) findViewById(R.id.et_Npoint1);
         TextView et_Npoint22 = (TextView) findViewById(R.id.et_Npoint2);
 
-        et_Npoint11.setText(Double.toString(et_Npoint1));
-        et_Npoint22.setText(Double.toString(et_Npoint2));
+        et_Npoint11.setText(Double.toString(et_Npoint2));
+        et_Npoint22.setText(Double.toString(et_Npoint1));
 
         // for supports values
         double et_Slow = Close-(diffrence*0.309);
@@ -76,11 +71,16 @@ public class History extends AppCompatActivity {
         TextView et_Sminor1 = (TextView) findViewById(R.id.et_Sminor);
         TextView et_Smajor1 = (TextView) findViewById(R.id.et_Smajor);
         TextView et_Sfinal1 = (TextView) findViewById(R.id.et_Sfinal);
-
-        et_Slow1.setText(Double.toString(et_Slow));
-        et_Sminor1.setText(Double.toString(et_Sminor));
-        et_Smajor1.setText(Double.toString(et_Smajor));
-        et_Sfinal1.setText(Double.toString(et_Sfinal));
+//set support values
+        et_Slow1.setText(Double.toString(et_RLow));
+        et_Sminor1.setText(Double.toString(et_Rminor));
+        et_Smajor1.setText(Double.toString(et_Rmajor));
+        et_Sfinal1.setText(Double.toString(et_Rfinal));
+// set final values
+        et_Rfinal1.setText(Double.toString(et_Sfinal));
+        et_Rmajor1.setText(Double.toString(et_Smajor));
+        et_Rminor1.setText(Double.toString(et_Sminor));
+        et_Rlow1.setText(Double.toString(et_Slow));
 
         goBack = findViewById(R.id.goBack);
         goBack.setOnClickListener(new View.OnClickListener() {
@@ -90,6 +90,5 @@ public class History extends AppCompatActivity {
                 finish();
             }
         });
-
     }
 }

@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -78,7 +79,7 @@ public class GalleryFragment extends Fragment implements RadioGroup.OnCheckedCha
         CurrentUser = fAuth.getCurrentUser();
         fstore = FirebaseFirestore.getInstance();
         reference = FirebaseDatabase.getInstance().getReference();
-
+        Checkout.preload(getActivity().getApplicationContext());
         et_open = (EditText)root.findViewById(R.id.et_open);
         et_high = (EditText)root.findViewById(R.id.et_high);
         et_low = (EditText)root.findViewById(R.id.et_low);
@@ -257,8 +258,8 @@ public class GalleryFragment extends Fragment implements RadioGroup.OnCheckedCha
     }
     public void makepayment() {
         Checkout checkout = new Checkout();
-//        checkout.setKeyID("rzp_live_DX6GCaGWUlPr1z");
-        checkout.setKeyID("rzp_test_evxJtZIlJlIzZ0");
+        checkout.setKeyID("rzp_live_DX6GCaGWUlPr1z");
+//        checkout.setKeyID("rzp_test_evxJtZIlJlIzZ0");
         checkout.setImage(R.mipmap.logo);
         try {
             JSONObject options = new JSONObject();
@@ -295,7 +296,12 @@ public class GalleryFragment extends Fragment implements RadioGroup.OnCheckedCha
     public void onPaymentError( String s,int i) {
         galleryViewModel.setOnError(false);
         Checkout.clearUserData(getContext());
-        Toast.makeText(getActivity(), "Payment failed: " ,Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getActivity(), "Payment failed: " ,Toast.LENGTH_SHORT).show();
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle("Payment");
+        builder.setMessage("Your Level Finder will start working within an hour as soon as your transaction get successfully completed. Please wait and support us.\n" +
+                "In case of payment failure. Please try again.");
+        builder.show();
     }
 
     private void AddSubscriptionData() {

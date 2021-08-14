@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.History;
@@ -79,9 +80,12 @@ public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewhol
                                        notifyDataSetChanged();
                           }
                           catch (Exception e){
-
                               Toast.makeText(v.getContext(), "Wait for responding", Toast.LENGTH_SHORT).show();
                           }
+                          AlertDialog.Builder builder = new AlertDialog.Builder(v.getRootView().getContext());
+//                          builder.setTitle("Level History");
+                          builder.setMessage("History cleared!!!");
+                          builder.show();
                       }
                   });
     }
