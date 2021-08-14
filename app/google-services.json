@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "589422263141",
+    "firebase_url": "https://hero-finder-e754a-default-rtdb.firebaseio.com",
+    "project_id": "hero-finder-e754a",
+    "storage_bucket": "hero-finder-e754a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589422263141:android:c554c2e4087640a627bf8c",
+        "android_client_info": {
+          "package_name": "com.hero.finder.herofinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "589422263141-lmi8euia34t6djtkeijbphkgdjdqvivn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7jtqILGguO4vQ73DOI5LwpO4YY7v0cVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "589422263141-lmi8euia34t6djtkeijbphkgdjdqvivn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
